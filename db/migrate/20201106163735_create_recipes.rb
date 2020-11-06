@@ -5,10 +5,6 @@ class CreateRecipes < ActiveRecord::Migration[6.0]
       t.string :image
       t.string :source
       t.string :url
-      t.string :ingredient_lines, array:true 
-      t.string :diet_labels, array:true 
-      t.string :health_labels, array:true
-      t.string :cautions, array:true 
       t.float :yield
       t.float :calories
       t.float :total_time
