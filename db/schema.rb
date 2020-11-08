@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_06_164228) do
+ActiveRecord::Schema.define(version: 2020_11_06_224739) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "diets", force: :cascade do |t|
+    t.string "label"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "mealplans", force: :cascade do |t|
     t.string "date"
@@ -23,15 +29,18 @@ ActiveRecord::Schema.define(version: 2020_11_06_164228) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "recipe_diets", force: :cascade do |t|
+    t.integer "recipe_id"
+    t.integer "diet_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "recipes", force: :cascade do |t|
     t.string "label"
     t.string "image"
     t.string "source"
     t.string "url"
-    t.string "ingredient_lines", array: true
-    t.string "diet_labels", array: true
-    t.string "health_labels", array: true
-    t.string "cautions", array: true
     t.float "yield"
     t.float "calories"
     t.float "total_time"
@@ -44,6 +53,13 @@ ActiveRecord::Schema.define(version: 2020_11_06_164228) do
     t.integer "rating"
     t.integer "user_id"
     t.integer "recipe_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "user_diets", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "diet_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
