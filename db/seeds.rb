@@ -16,7 +16,7 @@
 
 
 
-User.create(username:"whatever",password:"12345",preferences:["Low-Carb","Peanut-Free"])
+User.create(username:"whatever",password_digest:"12345",preferences:["Low-Carb","Peanut-Free"])
 
 Diet.create(label:"Low-Carb")
 Diet.create(label:"Peanut-Free")
@@ -31,3 +31,4 @@ Review.create(content:"I LOVE IT",rating: 5, user_id:1, recipe_id:1)
 Mealplan.create(user_id:1,recipe_id:1)
 RecipeDiet.create(recipe_id:1,diet_id:1)
 
+puts "db seeded"

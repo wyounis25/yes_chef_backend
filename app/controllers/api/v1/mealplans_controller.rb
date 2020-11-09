@@ -1,4 +1,4 @@
-class Api::V1::MealplanController < ApplicationController
+class Api::V1::MealplansController < ApplicationController
     def index
         @mealplans = Mealplan.all 
         render json: @mealplans
