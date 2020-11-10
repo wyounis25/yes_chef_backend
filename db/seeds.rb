@@ -16,7 +16,7 @@
 
 
 
-User.create(username:"whatever",password_digest:"12345",preferences:["Low-Carb","Peanut-Free"])
+User.create(username:"whatever",password:"12345",preferences:["Low-Carb","Peanut-Free"])
 
 Diet.create(label:"Low-Carb")
 Diet.create(label:"Peanut-Free")
