@@ -5,7 +5,9 @@ Rails.application.routes.draw do
       resources :recipes, :reviews, :mealplans
       resources :users
         post '/login', to: 'auth#create'
+        post '/users', to: 'users#create'
         get '/profile', to: 'users#profile'
+        get '/users', to: 'users#index'
     end 
   end 
 end
