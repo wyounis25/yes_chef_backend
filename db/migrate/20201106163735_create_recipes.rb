@@ -7,6 +7,8 @@ class CreateRecipes < ActiveRecord::Migration[6.0]
       t.string :url
       t.float :yield
       t.float :calories
+      t.string :health_labels, array: true 
+      t.string :ingredient_lines, array:true 
       t.float :total_time
       t.timestamps
     end
