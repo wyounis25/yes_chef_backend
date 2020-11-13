@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2020_11_06_224739) do
   create_table "mealplans", force: :cascade do |t|
     t.string "date"
     t.integer "user_id"
-    t.string "recipe_labels"
+    t.string "recipe_label"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

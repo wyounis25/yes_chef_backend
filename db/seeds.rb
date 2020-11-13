@@ -27,6 +27,5 @@ Recipe.create(label:"Pork Shoulder Steaks With Horseradish-Mustard Sauce",image:
 UserDiet.create(user_id:1, diet_id:2)
 UserDiet.create(user_id:1, diet_id:1)
 Review.create(content:"I LOVE IT",rating: 5, user_id:1, recipe_id:1)
-Mealplan.create(user_id:1,recipe_label:"chicken pot pie")
 RecipeDiet.create(recipe_id:1,diet_id:1)
 puts "db seeded"
